@@ -40,7 +40,7 @@ function play() {
    for(let i = 0; i<GAMES_TO_PLAY; i++){
     let p = ask();
     if(p === null){
-      spila = !spila;
+      return null;
       break;
     }
   }
@@ -72,6 +72,10 @@ function play() {
  */
 function ask() {
 let r = Question(randomNumber(0,3));
+if(r === null){
+  alert('Hætt í leik');
+  return null;
+}
 }
 
 function Question(random){
@@ -82,6 +86,8 @@ function Question(random){
     const input = prompt('Hvað er ' + a + '+' + b + '?');
     if(parseInt(input) === a+b)
     rett++;
+    if(input === null)
+    return null;
   }
 
   if(random == 1){
@@ -90,6 +96,8 @@ function Question(random){
     const input = prompt('Hvað er ' + a + '-' + b + '?');
     if(parseInt(input) === a-b)
     rett++;
+    if(input === null)
+    return null;
   }
 
   if(random == 2){
@@ -98,6 +106,8 @@ function Question(random){
     const input = prompt('Hvað er ' + a + '*' + b + '?');
     if(parseInt(input) === a*b)
     rett++;
+    if(input === null)
+    return null;
   }
 
   if(random == 3) {
@@ -106,6 +116,8 @@ function Question(random){
     const input = prompt('Hvað er ' + b + '/' + a + '?');
     if(parseInt(input) === b/a)
     rett++;
+    if(input === null)
+    return null;
   }
 
 }
