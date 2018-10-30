@@ -29,7 +29,7 @@ function start() {
  * Þar sem Y og Z hafa tvo aukastafi.
  *
  * Ef notandi ýtir á "Cancel" í leik eru skilaboðin "Hætt í leik." birt og engar
- * upplsýingar um niðurstöður.
+ * upplýsingar um niðurstöður.
  *
  */
 function play() {
@@ -72,13 +72,6 @@ function play() {
  */
 function ask() {
 let r = Question(randomNumber(0,3));
-if(r == true){
-  rett++
-}
-if(r == null){
-  alert('Hætt í leik');
-  return null;
-}
 }
 
 function Question(random){
@@ -88,9 +81,7 @@ function Question(random){
     let b = randomNumber(1,100);
     const input = prompt('Hvað er ' + a + '+' + b + '?');
     if(parseInt(input) === a+b)
-    return true;
-    if(input === null)
-    return null;
+    rett++;
   }
 
   if(random == 1){
@@ -98,9 +89,7 @@ function Question(random){
     let b = randomNumber(1,100);
     const input = prompt('Hvað er ' + a + '-' + b + '?');
     if(parseInt(input) === a-b)
-    return true;
-    if(input === null)
-    return null;
+    rett++;
   }
 
   if(random == 2){
@@ -108,9 +97,7 @@ function Question(random){
     let b = randomNumber(1,10);
     const input = prompt('Hvað er ' + a + '*' + b + '?');
     if(parseInt(input) === a*b)
-    return true;
-    if(input === null)
-    return null;
+    rett++;
   }
 
   if(random == 3) {
@@ -118,9 +105,7 @@ function Question(random){
     let b = a*randomNumber(2,10);
     const input = prompt('Hvað er ' + b + '/' + a + '?');
     if(parseInt(input) === b/a)
-    return true;
-    if(input === null)
-    return null;
+    rett++;
   }
 
 }
