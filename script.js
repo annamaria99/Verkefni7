@@ -45,9 +45,9 @@ function play() {
     }
   }
 
- const seconds_end = new Date().getTime(); //Tími í lokin
- const seconds = ((seconds_end - seconds_start)/1000).toFixed(2); //mismunur loka og upphafstíma
- const avg = (rett/seconds).toFixed(2); //meðalfjöldi réttra spurninga á sekúndu
+ const seconds_end = new Date().getTime(); 
+ const seconds = ((seconds_end - seconds_start)/1000).toFixed(2);
+ const avg = (rett/seconds).toFixed(2);
 
  if(spila === true){
   alert("Þú svaraðir " + rett + " af " + GAMES_TO_PLAY + " dæmum rétt á " + seconds + " sekúndum \n Meðalrétt svör á sekúndu eru " + avg);
