@@ -71,7 +71,7 @@ function play() {
 function ask() {
 let r = Question(randomNumber(0,3));
 if(r === null){
-  alert('Hætt í leik');
+  alert('Hætt í leik');  // Ef notandi ýtir á "Cancel" í leik eru skilaboðin "Hætt í leik."
   return null;
 }
 }
